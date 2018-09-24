@@ -72,11 +72,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
   
     /*
      SNS投稿
-     
-     - comment: nilの許容忘れによるエラー(80行) → https://qiita.com/motokiee/items/f9b2678d22ad06599308
      */
     @IBAction func shareAction(_ sender: Any) {
-        //
         if let shareImage = photoImageView?.image {
             let shareItems = [shareImage]
             let avc = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
