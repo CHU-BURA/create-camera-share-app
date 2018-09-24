@@ -18,7 +18,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         super.viewDidLoad()
 
         // 写真削除ボタンの表示判定
-        if (photoImageView != nil) {
+        if photoImageView != nil {
             closedViewButton.isHidden = true // 写真削除ボタンの非表示設定
         }
     }
@@ -109,8 +109,14 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBAction func closedViewAction(_ sender: Any) {
         print("写真を削除する処理")
         if let removeImageView = photoImageView {
-            closedViewButton.isHidden = true
-            removeImageView.removeFromSuperview()
+            let alert = UIAlertController(title: nil, message: "選択中の写真を取り消してよろしいですか？", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {
+                (action: UIAlertAction!) -> Void in
+                self.closedViewButton.isHidden = true
+                removeImageView.removeFromSuperview()
+            }))
+            alert.addAction(UIAlertAction(title: "CANCEL", style: .cancel, handler: nil))
+            present(alert, animated: true, completion: nil)
         }
     }
     
