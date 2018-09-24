@@ -48,7 +48,7 @@ SNS投稿
 `removeImageView.removeFromSuperview()`により削除された`UIImageView`に対して、nilの許容を反映する。  
 `photoImageView`に対して、`?`を付与してOptional型にすることでnilの代入を可能とする。  
 
-【参考】[SwiftでUIImageのimageNamed:でファイルが存在しなかったときに起こる謎](https://qiita.com/motokiee/items/c3a769f9fc2fb1367513)
+【参考】[SwiftのOptionalとType Safety](https://qiita.com/motokiee/items/f9b2678d22ad06599308)
 
 ```swift
 /*
@@ -71,3 +71,10 @@ SNS投稿
 }
 ```
 
+## 今後
+- iOS12のPortraitMatteなどの機能を対応させたい。  
+深度情報を操作できるようにする。  
+> 【参考】
+> - [[iOS 12] Portrait Matteで背景分離／セグメンテーション](https://qiita.com/shu223/items/2b4b6c048b7426474cf0) 
+> - [iOSDCで「深度（デプス）」について話しました #iosdc](http://shu223.hatenablog.com/entry/2018/09/06/095452#fnref:4)
+> - [デプス（深度）をiOSで扱う方法を網羅したサンプルコード集「iOS-Depth-Sampler」を公開しました](http://shu223.hatenablog.com/entry/2018/09/18/072233)
