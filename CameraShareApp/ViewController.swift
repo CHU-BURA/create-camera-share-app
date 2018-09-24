@@ -97,7 +97,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         ipc.sourceType = .photoLibrary
         ipc.delegate = self
         present(ipc, animated: true, completion: nil)
-        // 遅延処理 → 1秒後に実行 TODO:closeボタンの表示タイミングは改善が必要
+        // 遅延処理 → 2秒後に実行 TODO:closeボタンの表示タイミングは改善が必要
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.closedViewButton.isHidden = false
         }
