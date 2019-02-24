@@ -23,6 +23,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        // 写真削除ボタンの表示判定
+        if photoImageView != nil {
+            closedViewButton.isHidden = true // 写真削除ボタンの非表示設定
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
